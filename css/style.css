@@ -451,3 +451,76 @@ footer .fine-print {
   font-size: 8px;
   color: #aaa;
 }
+
+/* ===== Sandal World (sandal-world.html) ===== */
+body.sandal-page {
+  background: linear-gradient(180deg, #87ceeb 0%, #87ceeb 40%, #ebc98b 40%, #ebc98b 100%);
+  background-attachment: fixed;
+}
+
+.sandal-hero {
+  text-align: center;
+  padding: 30px 20px;
+}
+
+.sandal-decor {
+  font-size: 2.5rem;
+  letter-spacing: 20px;
+}
+
+#game-hud {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  background: rgba(255,255,255,0.7);
+  padding: 8px;
+  border-radius: 6px;
+}
+
+#game-area {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  height: 400px;
+  margin: 0 auto;
+  background: linear-gradient(180deg, #bdeaff 0%, #f7e2b4 100%);
+  border: 4px solid #4a2600;
+  overflow: hidden;
+}
+
+/* BUG 42: the basket's true hit-testing position (its inline `left`) and its
+   rendered position (shifted by this transform) are not the same place,
+   so catches never quite line up with where the basket visually is */
+#game-basket {
+  position: absolute;
+  bottom: 10px;
+  left: 160px;
+  font-size: 48px;
+  transform: translateX(40px);
+}
+
+.falling-sandal {
+  position: absolute;
+  font-size: 32px;
+  top: 0;
+}
+
+#game-controls {
+  text-align: center;
+  margin-top: 14px;
+}
+
+#game-controls button {
+  background: #ff6600;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  margin: 0 6px;
+  font-weight: bold;
+  cursor: pointer;
+  font-family: inherit;
+}

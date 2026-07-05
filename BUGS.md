@@ -85,6 +85,38 @@ Cheat sheet of every intentional issue, numbered to match code comments in
     that isn't on the page, so the visible photo never changes no matter
     how many times you click either arrow.
 
+35. **Sandal World page** (`sandal-world.html`) — a whole page themed around
+    sandals (beach gradient background, flip-flop marquee ticker, sandal
+    emoji decor) built around a "Catch The Sandal" mini-game. The theming
+    itself works fine; the game does not, on purpose, in the following ways:
+36. **Scoring is inverted** — successfully catching a falling sandal in the
+    basket *loses* a point, missing one *gains* a point, while the
+    instructions still say "catch sandals to win."
+37. **Controls are swapped** — the ← key moves the basket right and the →
+    key moves it left.
+38. **Sandals fall in erratic teleporting jumps** instead of a smooth,
+    consistent descent (random jump size each tick rather than a fixed
+    increment).
+39. **"Pause" doesn't pause** — it doubles the fall speed instead, and the
+    button label never changes, so it still says "Pause" no matter how many
+    times you click it.
+40. **Timer counts up, not down**, despite being labeled "Time Left." The
+    game-over check (`timeLeft <= 0`) is effectively dead code because of
+    this, so a round never ends on its own.
+41. **High score is stored and compared as a raw string** — multi-digit
+    scores compare lexically (`"9" > "10"` is `true` in JS) and "saving" a
+    new high score concatenates strings instead of using `Math.max`, so the
+    high score routinely turns into nonsense like `"010"`.
+42. **Basket hitbox doesn't match its visual position** — a CSS
+    `transform: translateX(40px)` shifts the basket after the JS has
+    already computed where it thinks the basket is, so catches that look
+    dead-on register as misses (and vice versa).
+43. **Missing sound effect** — `audio/sandal-flop.mp3` doesn't exist, so
+    every catch/miss throws a 404 in the console trying to play it.
+44. **Start/Restart never clean up first** — neither button clears the
+    previous spawn loop, timer, or leftover sandals on screen, so mashing
+    either button stacks multiple accelerating games on top of each other.
+
 ## Suggested reveal order for a live demo
 Open devtools console first (bug 9 hits immediately), then: hero image
 (5), countdown (11), add a couple items to cart (17), try the newsletter
@@ -95,4 +127,7 @@ the page loads, before you've said a word — good cold open. Save the
 History page's Back to Top button (27) for last: scroll all the way down
 through the wall of text, hit the button, and just... wait with the client
 in real time. The Testimonials page (28-34) is its own little tour — six
-customer photos, six different ways to fail to show a photo.
+customer photos, six different ways to fail to show a photo. Save Sandal
+World (35-44) for a big finish: play the game live, catch a sandal and
+watch the score go *down*, then hit Pause and watch everything speed up
+instead.

@@ -2,16 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>About - Chester's Shoe Tree</title>
+  <title>Sandal World - Chester's Shoe Tree</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="images/favicon.ico">
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="sandal-page">
 
   <div class="marquee-bar">
     <marquee behavior="scroll" direction="left">
-      🔥 MEGA CLEARANCE SALE — EVERYTHING MUST GO — DON'T MISS OUT — TELL YOUR FRIENDS — 🔥
+      🩴 WELCOME TO SANDAL WORLD 🩴 THE FINEST FLIP FLOPS EVER SOLD 🩴 PLAY OUR GAME BELOW 🩴
     </marquee>
   </div>
 
@@ -28,33 +28,37 @@
     <a href="history.html">History</a>
     <a href="testimonials.html">Testimonials</a>
     <a href="sandal-world.html">Sandal World</a>
-    <a href="index.html#reviews">Reviews</a>
     <a href="contact.html">Contact</a>
     <a href="blog.html">Blog</a>
   </nav>
 
-  <div class="construction-banner">
-    🚧 THIS PAGE IS UNDER CONSTRUCTION 🚧 (has been since 1998) 🚧
-  </div>
-
-  <section>
-    <h2 class="section-title">Our Story</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. [INSERT REAL COMPANY HISTORY HERE — ask Chester for the Word doc]</p>
-    <p>
-      Chester Higgenbottom III started this business out of his garage in 1987, or possibly 1989,
-      the paperwork is unclear. What is clear is that he loves shoes, he loves trees, and somehow
-      he loves them together.
-    </p>
+  <section class="sandal-hero">
+    <div class="sandal-decor">🩴🩴🩴🩴🩴</div>
+    <h2>Welcome To Sandal World</h2>
+    <p>A whole world. Of sandals. Enjoy the vibe, then try your luck below.</p>
   </section>
 
-  <section>
-    <h2 class="section-title">Meet The Team</h2>
-    <p><em>[Photos coming soon]</em></p>
-    <ul>
-      <li>Chester Higgenbottom III — Founder &amp; CEO</li>
-      <li>Gary — Does the accounting, also reviews things apparently</li>
-      <li>TBD — We're hiring!</li>
-    </ul>
+  <section style="text-align:center;">
+    <h2 class="section-title">🩴 Catch The Sandal! 🩴</h2>
+    <p>Catch falling sandals in the basket to score points. Reach 10 points to win a prize!*</p>
+    <p class="tiny-disclaimer">*prize not real, see terms nobody wrote</p>
+
+    <div id="game-hud">
+      <span>Score: <span id="game-score">0</span></span>
+      <span>Time Left: <span id="game-timer">30</span>s</span>
+      <span>High Score: <span id="game-highscore">0</span></span>
+    </div>
+
+    <div id="game-area">
+      <div id="game-basket">🧺</div>
+    </div>
+
+    <div id="game-controls">
+      <button onclick="startGame()">Start Game</button>
+      <button onclick="pauseGame()" id="pause-btn">Pause</button>
+      <button onclick="restartGame()">Restart</button>
+    </div>
+    <p class="tiny-disclaimer">Use the ← and → arrow keys to move the basket.</p>
   </section>
 
   <div class="chat-bubble" onclick="toggleChat()">💬 Chat with us!</div>
@@ -73,5 +77,6 @@
   </footer>
 
   <script src="js/script.js"></script>
+  <script src="js/sandal-game.js"></script>
 </body>
 </html>
