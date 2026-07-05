@@ -117,6 +117,15 @@ Cheat sheet of every intentional issue, numbered to match code comments in
     previous spawn loop, timer, or leftover sandals on screen, so mashing
     either button stacks multiple accelerating games on top of each other.
 
+45. **"Reviews" nav link** (`index.html`, `history.html`, `shop.html`, `about.html`,
+    `contact.html`) no longer scrolls to the on-page reviews section — it now goes
+    to `hacked.html`, a fake nation-state ransomware takeover screen (blinking
+    glitch text, a fake countdown ransom timer that loops forever instead of
+    reaching zero, a fake terminal log "encrypting" testimonials, and demands
+    payable in Bitcoin or orthopedic loafers). Entirely cosmetic, no real
+    scripts leave the page. Great cold-open swap: click "Reviews" expecting
+    star ratings, get "seized" instead.
+
 ## Suggested reveal order for a live demo
 Open devtools console first (bug 9 hits immediately), then: hero image
 (5), countdown (11), add a couple items to cart (17), try the newsletter

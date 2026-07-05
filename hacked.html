@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>⚠ SYSTEM COMPROMISED ⚠ - Chester's Shoe Tree</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="images/favicon.ico"> <!-- BUG 19 strikes again, even here -->
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: #000;
+      color: #00ff41;
+      font-family: 'Courier New', monospace;
+      overflow-x: hidden;
+    }
+
+    .siren-bar {
+      background: repeating-linear-gradient(45deg, red, red 20px, black 20px, black 40px);
+      color: yellow;
+      font-weight: bold;
+      padding: 6px 0;
+      overflow: hidden;
+      white-space: nowrap;
+      border-bottom: 3px dashed yellow;
+      text-shadow: 1px 1px 0 black;
+    }
+
+    .glitch {
+      text-align: center;
+      font-size: 2.4rem;
+      font-weight: bold;
+      color: #ff0033;
+      padding: 20px 10px 0;
+      text-shadow: 2px 0 #00ffea, -2px 0 #ff00ea;
+      animation: glitch 2.5s infinite;
+    }
+
+    @keyframes glitch {
+      0%, 92%, 100% { transform: translate(0, 0); }
+      93% { transform: translate(-2px, 1px); }
+      94% { transform: translate(2px, -1px); }
+      95% { transform: translate(-1px, -1px); }
+      96% { transform: translate(1px, 1px); }
+    }
+
+    .flag-art {
+      text-align: center;
+      font-size: 0.9rem;
+      line-height: 1.2;
+      color: #ff0033;
+      margin: 10px auto 0;
+      white-space: pre;
+    }
+
+    .subtitle {
+      text-align: center;
+      color: #00ff41;
+      margin-top: 6px;
+      font-size: 1rem;
+    }
+
+    .ransom-box {
+      max-width: 640px;
+      margin: 30px auto;
+      border: 3px double #ff0033;
+      padding: 18px;
+      background: rgba(255, 0, 51, 0.08);
+    }
+
+    .ransom-box h2 {
+      color: #ff0033;
+      text-align: center;
+      margin-top: 0;
+      animation: blink 1s step-start infinite;
+    }
+
+    @keyframes blink {
+      50% { opacity: 0.25; }
+    }
+
+    .timer {
+      text-align: center;
+      font-size: 2.2rem;
+      color: #ffcc00;
+      margin: 10px 0;
+      letter-spacing: 3px;
+    }
+
+    .demands {
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .demands li { margin-bottom: 6px; }
+
+    .terminal {
+      max-width: 640px;
+      margin: 20px auto;
+      background: #000;
+      border: 2px solid #00ff41;
+      padding: 14px;
+      height: 220px;
+      overflow-y: auto;
+      font-size: 0.85rem;
+      line-height: 1.5;
+    }
+
+    .terminal .prompt::before {
+      content: "> ";
+      color: #00ff41;
+    }
+
+    .terminal-cursor {
+      display: inline-block;
+      width: 8px;
+      background: #00ff41;
+      animation: blink 0.8s step-start infinite;
+    }
+
+    .warning-banner {
+      text-align: center;
+      background: #ff0033;
+      color: black;
+      font-weight: bold;
+      padding: 10px;
+      margin: 20px auto;
+      max-width: 640px;
+      text-transform: uppercase;
+      animation: blink 1.4s step-start infinite;
+    }
+
+    .escape-hatch {
+      text-align: center;
+      margin: 40px auto 60px;
+      font-size: 0.75rem;
+      color: #444;
+      max-width: 500px;
+      line-height: 1.5;
+    }
+
+    .escape-hatch a {
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="siren-bar">
+    <marquee behavior="scroll" direction="left">
+      🚨 UNAUTHORIZED ACCESS DETECTED — YOUR SHOE TREE HAS BEEN SEIZED — DO NOT TURN OFF YOUR COMPUTER — 🚨
+    </marquee>
+  </div>
+
+  <div class="glitch">⚠ THIS SITE HAS BEEN COMPROMISED ⚠</div>
+
+  <pre class="flag-art">
+   ★
+ ██████████
+ ██──────██
+ ██──────██
+ ██──────██
+ ██████████
+  </pre>
+
+  <p class="subtitle">a division of the RECONNAISSANCE GENERAL BUREAU, DEPT. OF FOOTWEAR AFFAIRS</p>
+
+  <div class="ransom-box">
+    <h2>ALL YOUR REVIEWS ARE BELONG TO US</h2>
+    <p style="text-align:center;">
+      Your customer testimonials, your shoe tree deed, and Gary from accounting's browser history
+      have been encrypted. To restore access, comply with the following demands before the timer
+      reaches zero:
+    </p>
+
+    <div class="timer" data-hack-timer>02:59:59</div>
+
+    <ul class="demands">
+      <li>💰 5,000 Bitcoin, or one (1) pair of genuinely comfortable orthopedic loafers — we are flexible</li>
+      <li>👞 Unconditional surrender of the secret shoe tree grove out back (we know it's not real, we want it anyway)</li>
+      <li>📜 The deed to Chester's Shoe Tree, notarized, with extra notarization for good measure</li>
+      <li>🎺 A formal, nationally televised apology for the Comic Sans</li>
+      <li>🧦 All remaining inventory of mismatched socks, no exceptions</li>
+    </ul>
+
+    <p style="text-align:center; font-size:0.8rem; color:#ffaa00;">
+      Failure to comply will result in permanent public disclosure of the cart math bug.
+    </p>
+  </div>
+
+  <div class="warning-banner">Do not attempt to refresh. Refreshing only makes us stronger.</div>
+
+  <div class="terminal" data-hack-terminal></div>
+
+  <div class="escape-hatch">
+    This is a joke on a joke website. Nothing was encrypted, nothing was sent anywhere, and Gary's
+    browser history remains exactly as concerning as before.
+    <br><a href="index.html">← climb back down the shoe tree</a>
+  </div>
+
+  <script>
+    (function () {
+      var lines = [
+        "connecting to grove-mainframe.chestersshoetree.local ...",
+        "access granted (password was 'chester1987', for shame)",
+        "locating testimonials.html ...",
+        "encrypting diane-r-review.txt ... done",
+        "encrypting garys-shoe-opinions.doc ... done",
+        "encrypting the-secret-grove-map.pdf ... done",
+        "exfiltrating mismatched sock inventory ...",
+        "uploading to undisclosed location via dial-up modem ...",
+        "demanding ransom in bitcoin and/or orthopedic loafers ...",
+        "this message will not self destruct, we're not made of budget"
+      ];
+
+      var term = document.querySelector('[data-hack-terminal]');
+      var i = 0;
+
+      function addLine() {
+        if (!term) return;
+        var div = document.createElement('div');
+        div.className = 'prompt';
+        div.textContent = lines[i % lines.length];
+        term.appendChild(div);
+        term.scrollTop = term.scrollHeight;
+        i++;
+        setTimeout(addLine, 1400);
+      }
+      addLine();
+
+      var timerEl = document.querySelector('[data-hack-timer]');
+      var secondsLeft = 3 * 60 * 60 - 1;
+
+      function renderTimer() {
+        if (!timerEl) return;
+        if (secondsLeft <= 0) {
+          secondsLeft = 3 * 60 * 60 - 1; // the deadline that never actually arrives
+        }
+        var h = Math.floor(secondsLeft / 3600);
+        var m = Math.floor((secondsLeft % 3600) / 60);
+        var s = secondsLeft % 60;
+        function pad(n) { return String(n).padStart(2, '0'); }
+        timerEl.textContent = pad(h) + ':' + pad(m) + ':' + pad(s);
+        secondsLeft--;
+      }
+      renderTimer();
+      setInterval(renderTimer, 1000);
+    })();
+  </script>
+
+</body>
+</html>
