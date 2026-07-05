@@ -21,8 +21,8 @@ Cheat sheet of every intentional issue, numbered to match code comments in
 11. **Sale countdown pointed at a past date** (Black Friday 2023) — the
     "limited time sale" has been over for a long time and happily counts
     into negative days/hours/minutes.
-12. **Glitter/sparkle cursor trail** follows the mouse everywhere, unrelated
-    to a shoe store, never asked for.
+12. **Cursor trail of 🩴🩴 (a pair of crocs)** follows the mouse everywhere,
+    never asked for.
 13. **Newsletter signup** disables its button, says "Subscribing...", throws
     a console error, and never re-enables — subscribing is a lie.
 14. **Contact form** always shows "Message sent successfully!" while

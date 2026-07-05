@@ -35,7 +35,6 @@ console.error('Uncaught: getCustomerDiscount is not defined');
 
 // BUG 12: glitter/sparkle cursor trail, because it's still 2004 somewhere
 (function sparkleTrail() {
-  const sparkles = ['✨', '⭐', '💫'];
   let last = 0;
   document.addEventListener('mousemove', function (e) {
     const now = Date.now();
@@ -43,7 +42,7 @@ console.error('Uncaught: getCustomerDiscount is not defined');
     last = now;
     const span = document.createElement('span');
     span.className = 'floating-sparkle';
-    span.textContent = sparkles[Math.floor(Math.random() * sparkles.length)];
+    span.textContent = '🩴🩴'; // a pair of crocs, trailing the cursor everywhere
     span.style.left = e.clientX + 'px';
     span.style.top = e.clientY + 'px';
     document.body.appendChild(span);
