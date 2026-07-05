@@ -53,24 +53,6 @@ header.site-header {
   50% { opacity: 0.15; }
 }
 
-.site-tagline {
-  color: #003300;
-  font-size: 1.1rem;
-  margin-top: 4px;
-}
-
-.ie-badge {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background: #003399;
-  color: white;
-  padding: 6px 10px;
-  font-size: 0.75rem;
-  border: 2px outset #6699ff;
-  transform: rotate(-4deg);
-}
-
 /* ===== Nav ===== */
 nav.main-nav {
   background: #222;
@@ -362,6 +344,12 @@ footer .fine-print {
   text-align: center;
   padding: 10px;
   text-shadow: 1px 1px 0 yellow;
+}
+
+/* ===== Content background (about.html) ===== */
+.about-content {
+  background: url('../images/bg.png') repeat;
+  padding: 20px 0;
 }
 
 /* ===== 404-ish helper (used nowhere real, just decorative) ===== */

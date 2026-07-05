@@ -42,8 +42,8 @@ Cheat sheet of every intentional issue, numbered to match code comments in
 21. **Copyright year stuck at 2011** in every footer.
 22. **Star ratings don't match review text** — e.g. a one-star, "would not
     recommend" review displayed with a full 5-star widget.
-23. **"Best Viewed In Internet Explorer 6+" badge**, presented with a
-    straight face.
+23. ~~**"Best Viewed In Internet Explorer 6+" badge**, presented with a
+    straight face.~~ *(removed from the header across all pages)*
 24. **"Under Construction" banner on About**, claiming the page has been
     under construction since 1998 while the rest of the site is "live."
 25. **Marquee ticker** (literal `<marquee>` tag) blasting an all-caps sale
@@ -114,6 +114,12 @@ Cheat sheet of every intentional issue, numbered to match code comments in
     payable in Bitcoin or orthopedic loafers). Entirely cosmetic, no real
     scripts leave the page. Great cold-open swap: click "Reviews" expecting
     star ratings, get "seized" instead.
+
+46. **Illegible body text on About** (`about.html`) — `images/bg.png` (a
+    dense, chaotic collage of hundreds of shoes) is tiled directly behind
+    the "Our Story" and "Meet The Team" copy with nothing to offset it —
+    no card background, no overlay. Fully intentional: the text is not
+    supposed to be readable.
 
 ## Suggested reveal order for a live demo
 Open devtools console first (bug 9 hits immediately), then: hero image
