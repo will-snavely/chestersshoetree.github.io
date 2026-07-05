@@ -142,29 +142,3 @@ function backToTopSlowly() {
   requestAnimationFrame(step);
 }
 
-// BUG 31: "Retry" button on a failed testimonial photo — spins for a
-// couple seconds to look like it's doing something, then confidently
-// fails again with the exact same error, forever.
-function retryLoad(button) {
-  const original = button.textContent;
-  button.disabled = true;
-  button.textContent = 'Retrying...';
-  setTimeout(() => {
-    button.disabled = false;
-    button.textContent = original;
-    console.error('Failed to load resource: the server responded with a status of 404 ()');
-  }, 1500);
-}
-
-// BUG 34: broken testimonial carousel. Prev throws (typo'd variable),
-// Next "works" in the sense that it runs without error, but it was wired
-// to the wrong element so the visible slide never actually changes.
-let testimonialSlideIndex = 0;
-function carouselNext() {
-  testimonialSlideIndex++;
-  console.log('advanced to slide', testimonialSlideIndex, '(nothing on screen will reflect this)');
-}
-function carouselPrev() {
-  testimonialSlideIndex--;
-  console.error('Uncaught ReferenceError: slideEl is not defined');
-}

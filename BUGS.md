@@ -62,30 +62,17 @@ Cheat sheet of every intentional issue, numbered to match code comments in
     distance to be agonizing over, and several more broken images
     (`images/history-*.jpg`) along the way.
 
-28. **Broken testimonial photo** on the new Testimonials page
-    (`testimonials.html`) — plain 404'd `<img>`, plus its little "Verified"
-    badge icon is *also* a broken image, so the verification badge fails to
-    verify itself.
-29. **Infinite loading spinner** on a second testimonial — a CSS spinner
-    with a "Loading photo…" label that spins forever because no JS was ever
-    written to replace it with anything.
-30. *(see 29 — spinner is pure CSS, `.spinner` in style.css, nothing ever
-    stops it)*
-31. **Fake "Retry" button** on a third testimonial — click it, it spins for
-    1.5 seconds to look busy, then fails again with the exact same 404,
-    forever. `retryLoad()` in script.js.
-32. **"Video testimonial"** with both the poster image and the video file
-    itself pointing at paths that don't exist (`images/testimonials/harold-
-    poster.jpg`, `videos/harold-testimonial.mp4`) — a testimonial you are
-    explicitly told to go watch and structurally cannot.
-33. **Frozen fake progress bar** stuck at "Loading image… 37%" — hardcoded
-    CSS width, no JS drives it, so it will sit at 37% until the heat death
-    of the universe.
-34. **Broken photo carousel** on the last testimonial — the prev arrow
-    throws `Uncaught ReferenceError: slideEl is not defined` in the console,
-    the next arrow runs with no error but was wired to update an element
-    that isn't on the page, so the visible photo never changes no matter
-    how many times you click either arrow.
+28. **Testimonial photos all load fine — they're just not of customers**
+    (`testimonials.html`) — all six testimonial photos are real, working
+    images (`images/2.png` through `images/7.png`). They're just someone's
+    vacation pictures (a family on the beach, a coral reef, a resort at
+    dusk, a kid on shoulders, a tiki cocktail) that got uploaded to the
+    testimonial slots by mistake, sitting directly under review text that
+    has nothing to do with any of it. Presented completely straight-faced.
+    (Retired the previous 29–34, which were about broken/frozen loading
+    states for these same photo slots — spinner, retry button, missing
+    video, frozen progress bar, and dead carousel arrows are all gone now
+    that there's a real, if wrong, image in every slot.)
 
 35. **Sandal World page** (`sandal-world.html`) — a whole page themed around
     sandals (beach gradient background, flip-flop marquee ticker, sandal
@@ -137,8 +124,9 @@ If you've dropped an audio file in, that one starts blasting the instant
 the page loads, before you've said a word — good cold open. Save the
 History page's Back to Top button (27) for last: scroll all the way down
 through the wall of text, hit the button, and just... wait with the client
-in real time. The Testimonials page (28-34) is its own little tour — six
-customer photos, six different ways to fail to show a photo. Save Sandal
+in real time. The Testimonials page (28) is its own little tour — six customer reviews,
+six photos that are very clearly someone's vacation, not a single shoe in
+sight. Save Sandal
 World (35-44) for a big finish: play the game live, catch a sandal and
 watch the score go *down*, then hit Pause and watch everything speed up
 instead.
