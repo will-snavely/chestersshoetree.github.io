@@ -114,7 +114,9 @@ Cheat sheet of every intentional issue, numbered to match code comments in
     reaching zero, a fake terminal log "encrypting" testimonials, and demands
     payable in Bitcoin or orthopedic loafers). Entirely cosmetic, no real
     scripts leave the page. Great cold-open swap: click "Reviews" expecting
-    star ratings, get "seized" instead.
+    star ratings, get "seized" instead. Also autoplays `audio/anthem.mp3` on
+    loop the instant the page loads, same no-controls no-mute-button
+    treatment as bug 26 on Home.
 
 46. **Illegible body text on About** (`about.html`) — `images/bg.png` (a
     dense, chaotic collage of hundreds of shoes) is tiled directly behind
