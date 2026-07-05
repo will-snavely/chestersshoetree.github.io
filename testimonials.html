@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Testimonials - Chester's Shoe Tree</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="marquee-bar">
+    <marquee behavior="scroll" direction="left">
+      🔥 MEGA CLEARANCE SALE — EVERYTHING MUST GO — DON'T MISS OUT — TELL YOUR FRIENDS — 🔥
+    </marquee>
+  </div>
+
+  <header class="site-header">
+    <div class="ie-badge">Best Viewed In<br>Internet Explorer 6+</div>
+    <h1 class="site-title">🌳 Chester's Shoe Tree 👞</h1>
+    <p class="site-tagline">"Where Every Sole Grows On Trees Since 1987"</p>
+  </header>
+
+  <nav class="main-nav">
+    <a href="index.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="about.html">About</a>
+    <a href="history.html">History</a>
+    <a href="testimonials.html">Testimonials</a>
+    <a href="contact.html">Contact</a>
+    <a href="blog.html">Blog</a>
+  </nav>
+
+  <section>
+    <h2 class="section-title">Customer Testimonials</h2>
+    <p>
+      Don't take our word for it — take the word of our customers, presented here in a
+      beautiful photo gallery that our previous web developer swore was "basically done."
+    </p>
+  </section>
+
+  <section>
+    <div class="testimonial-grid">
+
+      <!-- BUG 28: plain broken image, file never existed -->
+      <div class="testimonial-card">
+        <div class="testimonial-media">
+          <img src="images/testimonials/diane-r.jpg" alt="Photo of Diane R., verified customer">
+        </div>
+        <div class="testimonial-name">Diane R. <span class="verified-badge"><img src="images/badge-verified.svg" alt="Verified badge"></span></div>
+        <div class="review-stars">★★★★★</div>
+        <p>"I would not recommend this store to anyone. One star."</p>
+      </div>
+
+      <!-- BUG 29: infinite spinner, no JS ever removes it, "loading" forever -->
+      <div class="testimonial-card">
+        <div class="testimonial-media">
+          <div style="display:flex; flex-direction:column; align-items:center;">
+            <div class="spinner"></div>
+            <div class="spinner-label">Loading photo…</div>
+          </div>
+        </div>
+        <div class="testimonial-name">Gary <span style="font-weight:normal;">(from accounting)</span></div>
+        <div class="review-stars">★★★★★</div>
+        <p>"Bought a shoe. It was a shoe. 10/10."</p>
+      </div>
+
+      <!-- BUG 31: hardcoded permanent error state with a fake retry button -->
+      <div class="testimonial-card">
+        <div class="testimonial-media">
+          <div class="media-error">
+            ⚠️ Image failed to load<br>
+            <small>(status 404)</small><br>
+            <button class="retry-btn" onclick="retryLoad(this)">Retry</button>
+          </div>
+        </div>
+        <div class="testimonial-name">Marge T.</div>
+        <div class="review-stars">★★★★★</div>
+        <p>"The tree metaphor really confused my grandson but the loafers are nice."</p>
+      </div>
+
+      <!-- BUG 32: "video testimonial" pointing at a file that doesn't exist, broken poster too -->
+      <div class="testimonial-card">
+        <div class="testimonial-media">
+          <video controls poster="images/testimonials/harold-poster.jpg" style="width:100%; height:100%;">
+            <source src="videos/harold-testimonial.mp4" type="video/mp4">
+            Your browser does not support the video tag, not that it matters here.
+          </video>
+        </div>
+        <div class="testimonial-name">Harold P. <span style="font-weight:normal;">(video testimonial)</span></div>
+        <div class="review-stars">★★★★☆</div>
+        <p>"Watch Harold describe his loafers in his own words." (you cannot, the file is missing)</p>
+      </div>
+
+      <!-- BUG 33: fake progress bar frozen at 37%, nothing ever animates it -->
+      <div class="testimonial-card">
+        <div class="testimonial-media">
+          <div style="display:flex; flex-direction:column; align-items:center; width:100%; padding:0 16px;">
+            <div class="fake-progress-text">Loading image… 37%</div>
+            <div class="fake-progress-wrap">
+              <div class="fake-progress-bar"></div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-name">Priya S.</div>
+        <div class="review-stars">★★★★★</div>
+        <p>"Ordered boots for a hike. Received boots. Went on hike. 5 stars for the boots existing."</p>
+      </div>
+
+      <!-- BUG 34: broken carousel, arrows do nothing visible, one throws a console error -->
+      <div class="testimonial-card">
+        <div class="testimonial-media">
+          <div class="testimonial-carousel">
+            <button class="carousel-arrow" onclick="carouselPrev()">&#8249;</button>
+            <img src="images/testimonials/bob-1.jpg" alt="Bob's shoe photo, slide 1 of 3" style="width:60%; height:100%; object-fit:cover;">
+            <button class="carousel-arrow" onclick="carouselNext()">&#8250;</button>
+          </div>
+        </div>
+        <div class="testimonial-name">Bob K. <span style="font-weight:normal;">(3 photos)</span></div>
+        <div class="review-stars">★★★☆☆</div>
+        <p>"Sent in three photos of my new sandals. Website only ever shows the first one, and the arrows are decorative apparently."</p>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="chat-bubble" onclick="toggleChat()">💬 Chat with us!</div>
+  <div class="chat-window" data-chat-window>
+    <strong>Live Support</strong>
+    <p>Agent Chester is typing...</p>
+  </div>
+
+  <footer>
+    <div class="social-icons">
+      <a href="https://facebook.com/#">📘</a>
+      <a href="https://twitter.com/#">🐦</a>
+      <a href="https://instagram.com/#">📷</a>
+    </div>
+    <p>&copy; 2011 Chester's Shoe Tree. All rights reserved.</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

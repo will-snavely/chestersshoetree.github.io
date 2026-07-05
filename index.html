@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Chester's Shoe Tree - Home of Fine Footwear Since 1987</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="images/favicon.ico"> <!-- BUG 19: favicon file doesn't exist, 404 in console -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- BUG 26: autoplaying background audio, no controls, no mute button, loops forever.
+       audio/welcome-to-chesters.mp3 doesn't exist yet -- drop a file in at that path
+       to "activate" it. Pick whatever's funniest for the bit. -->
+  <audio autoplay loop>
+    <source src="audio/welcome-to-chesters.mp3" type="audio/mpeg">
+  </audio>
+
+  <div class="marquee-bar">
+    <marquee behavior="scroll" direction="left">
+      🔥 MEGA CLEARANCE SALE — EVERYTHING MUST GO — DON'T MISS OUT — TELL YOUR FRIENDS — 🔥
+    </marquee>
+  </div>
+
+  <header class="site-header">
+    <div class="ie-badge">Best Viewed In<br>Internet Explorer 6+</div>
+    <h1 class="site-title">🌳 Chester's Shoe Tree 👞</h1>
+    <p class="site-tagline">"Where Every Sole Grows On Trees Since 1987"</p>
+  </header>
+
+  <nav class="main-nav">
+    <a href="index.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="about.html">About</a>
+    <a href="history.html">History</a>
+    <a href="testimonials.html">Testimonials</a>
+    <a href="#reviews">Reviews</a>
+    <a href="contact.html">Contact</a>
+    <a href="blog.html">Blog</a> <!-- BUG 20: blog.html doesn't exist, real 404 -->
+  </nav>
+
+  <section class="hero">
+    <div>
+      <h2>Step Into Comfort. Step Into Chester's.</h2><br>
+      <a class="hero-cta" href="shop.html">Shop Now &raquo;</a>
+    </div>
+  </section>
+
+  <section style="text-align:center;">
+    <h2 class="section-title">You Are Visitor Number:</h2><br>
+    <div class="visitor-counter" data-visitor-counter>000000</div>
+  </section>
+
+  <section style="text-align:center;">
+    <h2 class="section-title">Sale Ends In:</h2>
+    <p style="font-size:1.4rem; font-weight:bold; color:red;" data-countdown>calculating...</p>
+    <p class="tiny-disclaimer">terms and conditions may not apply, see fine print below, or don't, we didn't proofread it either</p>
+  </section>
+
+  <section>
+    <h2 class="section-title">About Chester</h2>
+    <p>
+      Founded in 1987 by Chester Higgenbottom III, Chester's Shoe Tree has been a proud purveyor of
+      footwear for over three decades. We source our shoes from a magical grove out back where,
+      legend has it, shoes grow directly on trees. (They do not. We import them like everyone else.)
+    </p>
+  </section>
+
+  <section id="reviews">
+    <h2 class="section-title">What Our Customers Say</h2>
+
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p>"I would not recommend this store to anyone. One star." — Diane R.</p>
+    </div>
+
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p>"Bought a shoe. It was a shoe. 10/10." — Gary from accounting</p>
+    </div>
+
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p>"The tree metaphor really confused my grandson but the loafers are nice." — Marge T.</p>
+    </div>
+  </section>
+
+  <div class="newsletter-box">
+    <h2>Join Our Mailing List!</h2>
+    <p>Get exclusive deals and updates about our shoe tree grove!</p>
+    <form onsubmit="return subscribeNewsletter(event)">
+      <input type="email" placeholder="you@example.com" required>
+      <button type="submit">Subscribe</button>
+    </form>
+  </div>
+
+  <div class="chat-bubble" onclick="toggleChat()">💬 Chat with us!</div>
+  <div class="chat-window" data-chat-window>
+    <strong>Live Support</strong>
+    <p>Agent Chester is typing...</p>
+  </div>
+
+  <footer>
+    <div class="social-icons">
+      <a href="https://facebook.com/#">📘</a>
+      <a href="https://twitter.com/#">🐦</a>
+      <a href="https://instagram.com/#">📷</a>
+    </div>
+    <p>&copy; 2011 Chester's Shoe Tree. All rights reserved.</p>
+    <p class="fine-print">
+      By using this website you agree to our terms of service which we have not written yet.
+      Chester's Shoe Tree is not responsible for shoes that grow, shrink, walk away on their own,
+      or develop sentience. Void where prohibited. Not a real tree. Please do not water your shoes.
+      Offer valid while supplies last, or after, we honestly don't track that. All sales final,
+      even the ones that aren't. Batteries not included. Some assembly required. Terms subject
+      to change without notice, notice subject to change without terms.
+    </p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

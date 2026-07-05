@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shop - Chester's Shoe Tree</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="marquee-bar">
+    <marquee behavior="scroll" direction="left">
+      🔥 MEGA CLEARANCE SALE — EVERYTHING MUST GO — DON'T MISS OUT — TELL YOUR FRIENDS — 🔥
+    </marquee>
+  </div>
+
+  <header class="site-header">
+    <div class="ie-badge">Best Viewed In<br>Internet Explorer 6+</div>
+    <h1 class="site-title">🌳 Chester's Shoe Tree 👞</h1>
+    <p class="site-tagline">"Where Every Sole Grows On Trees Since 1987"</p>
+  </header>
+
+  <nav class="main-nav">
+    <a href="index.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="about.html">About</a>
+    <a href="history.html">History</a>
+    <a href="testimonials.html">Testimonials</a>
+    <a href="index.html#reviews">Reviews</a>
+    <a href="contact.html">Contact</a>
+    <a href="blog.html">Blog</a>
+  </nav>
+
+  <section>
+    <h2 class="section-title">Find Your Perfect Shoe</h2>
+    <form onsubmit="return fakeSearch(event)">
+      <input type="search" placeholder="Search shoes...">
+      <button type="submit">Search</button>
+    </form>
+    <p data-search-results></p>
+
+    <label for="sort">Sort by:</label>
+    <select id="sort" onchange="sortProducts()">
+      <option>Price: Low to High</option>
+      <option>Price: High to Low</option>
+      <option>Most Popular</option>
+    </select>
+  </section>
+
+  <section>
+    <h2 class="section-title">Our Collection</h2>
+    <div class="product-grid">
+
+      <div class="product-card">
+        <img src="images/loafer.jpg" alt="Classic Brown Loafer">
+        <h3>Classic Brown Loafer</h3>
+        <div class="price">$9.99</div>
+        <button class="add-cart-btn" onclick="addToCart('Classic Brown Loafer', '9.99')">Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+        <img src="images/sneaker.jpg" alt="Ultra Bounce Sneaker">
+        <h3>Ultra Bounce Sneaker</h3>
+        <div class="price">$12.99</div>
+        <button class="add-cart-btn" onclick="addToCart('Ultra Bounce Sneaker', '12.99')">Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+        <img src="images/boot.jpg" alt="Rugged Grove Boot">
+        <h3>Rugged Grove Boot</h3>
+        <div class="price">$45.00</div>
+        <button class="add-cart-btn" onclick="addToCart('Rugged Grove Boot', '45.00')">Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+        <img src="images/sandal.jpg" alt="Chester's Signature Sandal">
+        <h3>Chester's Signature Sandal</h3>
+        <div class="price">$7.50</div>
+        <button class="add-cart-btn" onclick="addToCart('Chester\'s Signature Sandal', '7.50')">Add to Cart</button>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title">Your Cart</h2>
+    <div class="cart-summary">
+      <div data-cart-items><em>Your cart is empty. Add some shoes!</em></div>
+      <hr>
+      <strong>Total: <span data-cart-total data-running-total="">$0</span></strong>
+    </div>
+  </section>
+
+  <div class="chat-bubble" onclick="toggleChat()">💬 Chat with us!</div>
+  <div class="chat-window" data-chat-window>
+    <strong>Live Support</strong>
+    <p>Agent Chester is typing...</p>
+  </div>
+
+  <footer>
+    <div class="social-icons">
+      <a href="https://facebook.com/#">📘</a>
+      <a href="https://twitter.com/#">🐦</a>
+      <a href="https://instagram.com/#">📷</a>
+    </div>
+    <p>&copy; 2011 Chester's Shoe Tree. All rights reserved.</p>
+    <p class="fine-print">
+      Prices shown are approximate and may not reflect the actual total charged, refunded,
+      or invented at checkout. Cart totals are calculated using a proprietary algorithm
+      that we inherited from a previous developer who is no longer with the company.
+    </p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

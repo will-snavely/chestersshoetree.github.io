@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact - Chester's Shoe Tree</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="marquee-bar">
+    <marquee behavior="scroll" direction="left">
+      🔥 MEGA CLEARANCE SALE — EVERYTHING MUST GO — DON'T MISS OUT — TELL YOUR FRIENDS — 🔥
+    </marquee>
+  </div>
+
+  <header class="site-header">
+    <div class="ie-badge">Best Viewed In<br>Internet Explorer 6+</div>
+    <h1 class="site-title">🌳 Chester's Shoe Tree 👞</h1>
+    <p class="site-tagline">"Where Every Sole Grows On Trees Since 1987"</p>
+  </header>
+
+  <nav class="main-nav">
+    <a href="index.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="about.html">About</a>
+    <a href="history.html">History</a>
+    <a href="testimonials.html">Testimonials</a>
+    <a href="index.html#reviews">Reviews</a>
+    <a href="contact.html">Contact</a>
+    <a href="blog.html">Blog</a>
+  </nav>
+
+  <section>
+    <h2 class="section-title">Get In Touch</h2>
+    <p>Have a question about your order, our shoe grove, or life in general? Fill out the form below!</p>
+
+    <form onsubmit="return submitContactForm(event)">
+      <p>
+        <label>Name:<br>
+          <input type="text" name="name" required style="width:100%; max-width:300px;">
+        </label>
+      </p>
+      <p>
+        <label>Email:<br>
+          <input type="email" name="email" required style="width:100%; max-width:300px;">
+        </label>
+      </p>
+      <p>
+        <label>Message:<br>
+          <textarea name="message" rows="5" style="width:100%; max-width:300px;" required></textarea>
+        </label>
+      </p>
+      <button type="submit" class="add-cart-btn">Send Message</button>
+    </form>
+
+    <h3>Other Ways To Reach Us</h3>
+    <p>Phone: (555) 010-TREE</p>
+    <p>Email: chester@[domain not yet purchased].com</p>
+    <p>Address: 123 Sole Street, Grovetown, USA (please don't actually come here)</p>
+  </section>
+
+  <div class="chat-bubble" onclick="toggleChat()">💬 Chat with us!</div>
+  <div class="chat-window" data-chat-window>
+    <strong>Live Support</strong>
+    <p>Agent Chester is typing...</p>
+  </div>
+
+  <footer>
+    <div class="social-icons">
+      <a href="https://facebook.com/#">📘</a>
+      <a href="https://twitter.com/#">🐦</a>
+      <a href="https://instagram.com/#">📷</a>
+    </div>
+    <p>&copy; 2011 Chester's Shoe Tree. All rights reserved.</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

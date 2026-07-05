@@ -1,0 +1,453 @@
+/* Chester's Shoe Tree — site styles
+   (BUG references match BUGS.md) */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Comic Sans MS', 'Comic Sans', cursive; /* BUG 1: Comic Sans everywhere */
+  background-color: #f4e9d8;
+  background-image: repeating-linear-gradient(45deg, #f4e9d8, #f4e9d8 20px, #e9dcc3 20px, #e9dcc3 40px); /* BUG 2: tiled 2003-era background */
+  color: #222;
+  cursor: url('data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBTAA7'), auto;
+}
+
+a {
+  color: #0033cc;
+}
+
+/* ===== Top marquee sale bar ===== */
+.marquee-bar {
+  background: red;
+  color: yellow;
+  font-weight: bold;
+  padding: 6px 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border-bottom: 3px dashed black;
+}
+
+.marquee-bar marquee {
+  font-size: 1.1rem;
+}
+
+/* ===== Header ===== */
+header.site-header {
+  background: linear-gradient(90deg, #ff00cc, #00ffcc); /* BUG 3: clashing neon gradient */
+  padding: 20px;
+  text-align: center;
+  position: relative;
+}
+
+.site-title {
+  font-size: 3.2rem;
+  margin: 0;
+  color: white;
+  text-shadow: 3px 3px 0 #000;
+  animation: blinker 1s linear infinite; /* BUG 4: <blink> reincarnated via CSS */
+}
+
+@keyframes blinker {
+  50% { opacity: 0.15; }
+}
+
+.site-tagline {
+  color: #003300;
+  font-size: 1.1rem;
+  margin-top: 4px;
+}
+
+.ie-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #003399;
+  color: white;
+  padding: 6px 10px;
+  font-size: 0.75rem;
+  border: 2px outset #6699ff;
+  transform: rotate(-4deg);
+}
+
+/* ===== Nav ===== */
+nav.main-nav {
+  background: #222;
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  flex-wrap: wrap;
+}
+
+nav.main-nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 14px 22px;
+  font-weight: bold;
+  border-right: 1px solid #444;
+}
+
+nav.main-nav a:hover {
+  background: #ff00cc;
+  color: #000;
+}
+
+/* ===== Hero ===== */
+.hero {
+  position: relative;
+  min-height: 340px;
+  background: #ccc url('../images/hero-shoe.jpg') center/cover no-repeat; /* BUG 5: image path does not exist -> broken image */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.hero h2 {
+  background: rgba(255,255,255,0.85);
+  padding: 10px 20px;
+  font-size: 2rem;
+  z-index: 5; /* BUG 6: pointless z-index soup, see .floating-sparkle */
+}
+
+.hero-cta {
+  display: inline-block;
+  margin-top: 12px;
+  background: gold;
+  border: 3px solid #b8860b;
+  padding: 10px 18px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #4a2600;
+}
+
+/* ===== Sections ===== */
+section {
+  padding: 30px 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+h2.section-title {
+  border-bottom: 4px dotted #ff00cc;
+  display: inline-block;
+  padding-bottom: 4px;
+}
+
+/* ===== Visitor Counter ===== */
+.visitor-counter {
+  text-align: center;
+  font-family: 'Courier New', monospace;
+  background: black;
+  color: #00ff00;
+  display: inline-block;
+  padding: 8px 14px;
+  letter-spacing: 4px;
+  border: 4px ridge #888;
+}
+
+/* ===== Reviews ===== */
+.review-card {
+  border: 2px solid #ddd;
+  background: #fff;
+  padding: 14px;
+  margin-bottom: 14px;
+  border-radius: 6px;
+}
+
+.review-stars {
+  color: gold;
+  font-size: 1.3rem;
+}
+
+/* ===== Testimonials gallery (testimonials.html) ===== */
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.testimonial-card {
+  background: white;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.testimonial-media {
+  height: 160px;
+  background: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  border: 1px dashed #bbb;
+}
+
+.testimonial-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.testimonial-name {
+  font-weight: bold;
+}
+
+.verified-badge img {
+  width: 14px;
+  height: 14px;
+  vertical-align: middle;
+}
+
+/* BUG 30: spinner that never resolves, nothing ever removes it */
+.spinner {
+  width: 34px;
+  height: 34px;
+  border: 5px solid #ccc;
+  border-top-color: #ff00cc;
+  border-radius: 50%;
+  animation: spin 0.9s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.spinner-label {
+  font-size: 0.8rem;
+  color: #666;
+  margin-top: 6px;
+}
+
+/* BUG 31: hardcoded permanent failure state with a retry button that does nothing useful */
+.media-error {
+  text-align: center;
+  color: #a00;
+  font-size: 0.85rem;
+  padding: 10px;
+}
+
+.retry-btn {
+  margin-top: 6px;
+  background: #eee;
+  border: 1px solid #999;
+  padding: 4px 10px;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+/* BUG 33: progress bar frozen at a hardcoded percentage, CSS-only, never moves */
+.fake-progress-wrap {
+  width: 80%;
+  background: #ddd;
+  height: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-top: 8px;
+}
+
+.fake-progress-bar {
+  height: 100%;
+  background: #ff00cc;
+  width: 37%; /* stuck here forever, nothing animates it further */
+}
+
+.fake-progress-text {
+  font-size: 0.75rem;
+  color: #666;
+}
+
+/* BUG 34: broken carousel, arrows exist, image never actually changes */
+.testimonial-carousel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.carousel-arrow {
+  background: #333;
+  color: white;
+  border: none;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+/* ===== Products (shop.html) ===== */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.product-card {
+  background: white;
+  border: 2px solid #999;
+  padding: 12px;
+  text-align: center;
+}
+
+.product-card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  background: #eee;
+}
+
+.product-card .price {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: green;
+}
+
+.add-cart-btn {
+  background: #00cc44;
+  border: none;
+  padding: 8px 14px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 6px;
+}
+
+.cart-summary {
+  border: 3px double #333;
+  padding: 14px;
+  margin-top: 20px;
+  background: #fffbe6;
+  font-size: 1.2rem;
+}
+
+/* ===== Newsletter ===== */
+.newsletter-box {
+  background: #003300;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.newsletter-box input[type="email"] {
+  padding: 8px;
+  width: 220px;
+  max-width: 60%;
+}
+
+.newsletter-box button {
+  padding: 8px 16px;
+  background: yellow;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* ===== Footer ===== */
+footer {
+  background: #111;
+  color: #999;
+  text-align: center;
+  padding: 20px;
+}
+
+footer .fine-print {
+  font-size: 8px; /* BUG 7: unreadable legal text, on purpose */
+  color: #555;
+  max-width: 600px;
+  margin: 10px auto 0;
+  line-height: 1.1;
+}
+
+.social-icons a {
+  color: #fff;
+  margin: 0 8px;
+  text-decoration: none;
+  font-size: 1.4rem;
+}
+
+/* ===== Floating sparkle cursor trail ===== */
+.floating-sparkle {
+  position: fixed;
+  pointer-events: none;
+  font-size: 18px;
+  z-index: 9999;
+  animation: sparkle-fade 0.8s ease-out forwards;
+}
+
+@keyframes sparkle-fade {
+  from { opacity: 1; transform: translateY(0) scale(1); }
+  to   { opacity: 0; transform: translateY(-20px) scale(0.4); }
+}
+
+/* ===== Back to top button ===== */
+.back-to-top {
+  display: block;
+  margin: 40px auto;
+  background: #ff00cc;
+  color: white;
+  border: 3px solid #990077;
+  padding: 14px 26px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  font-family: inherit;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.back-to-top:disabled {
+  opacity: 0.7;
+  cursor: wait;
+}
+
+/* ===== Live chat bubble ===== */
+.chat-bubble {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #ff6600;
+  color: white;
+  padding: 14px 18px;
+  border-radius: 50px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+  z-index: 500; /* clashes with .hero h2 z-index, part of BUG 6 */
+}
+
+.chat-window {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 240px;
+  background: white;
+  border: 2px solid #333;
+  padding: 10px;
+  display: none;
+}
+
+.chat-window.open {
+  display: block;
+}
+
+/* ===== Under construction (about.html) ===== */
+.construction-banner {
+  background: repeating-linear-gradient(45deg, yellow, yellow 20px, black 20px, black 40px);
+  color: black;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+  text-shadow: 1px 1px 0 yellow;
+}
+
+/* ===== 404-ish helper (used nowhere real, just decorative) ===== */
+.tiny-disclaimer {
+  font-size: 8px;
+  color: #aaa;
+}
