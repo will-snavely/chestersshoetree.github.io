@@ -1,6 +1,6 @@
 # Chester's Shoe Tree — Planted Problems (for the bit, not for the client)
 
-Update. Again.
+Update. Again. AGAIN.
 
 Cheat sheet of every intentional issue, numbered to match code comments in
 `css/style.css` and `js/script.js`. Use this to decide what to "discover" live.
