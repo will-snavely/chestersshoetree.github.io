@@ -1,11 +1,6 @@
 // Chester's Shoe Tree — site script
 // (BUG references match BUGS.md)
 
-// BUG 8: leftover debug alert that should never have shipped
-window.addEventListener('load', function () {
-  alert('DEBUG: remove this before we go live!! - Chester');
-});
-
 // BUG 9: console noise a curious client might open devtools and find
 console.log('loading chester shoe tree v0.9-FINAL-final2-USE_THIS_ONE.js');
 console.warn('TODO: hook up real payment processor, currently fake');

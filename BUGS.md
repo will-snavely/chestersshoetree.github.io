@@ -12,8 +12,6 @@ Cheat sheet of every intentional issue, numbered to match code comments in
 6. **Z-index soup** — sparkle trail (9999) and chat bubble (500) fight with
    the hero heading; nothing was planned, numbers were just picked at random.
 7. **Unreadable 8px fine print** in the footer, low contrast on purpose.
-8. **`alert("DEBUG: remove this before we go live!!")`** fires on every page
-   load — the classic forgotten debug statement.
 9. **Console spam** on load: a stray `console.log`, `console.warn`, and a
    `console.error` about a function (`getCustomerDiscount`) that was never
    written.
@@ -88,7 +86,7 @@ Cheat sheet of every intentional issue, numbered to match code comments in
     how many times you click either arrow.
 
 ## Suggested reveal order for a live demo
-Open devtools console first (bugs 8, 9 hit immediately), then: hero image
+Open devtools console first (bug 9 hits immediately), then: hero image
 (5), countdown (11), add a couple items to cart (17), try the newsletter
 (13), try contact form (14), try search (16), click chat (15), click Blog
 in the nav (20), scroll to footer for the copyright/fine print (7, 21).
