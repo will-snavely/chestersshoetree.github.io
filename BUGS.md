@@ -25,9 +25,10 @@ Cheat sheet of every intentional issue, numbered to match code comments in
     never asked for.
 13. **Newsletter signup** disables its button, says "Subscribing...", throws
     a console error, and never re-enables — subscribing is a lie.
-14. **Contact form** always shows "Message sent successfully!" while
+14. ~~**Contact form** always shows "Message sent successfully!" while
     throwing `Uncaught ReferenceError: sendToCRM is not defined` in the
-    console — the message goes nowhere.
+    console — the message goes nowhere.~~ *(the Contact page itself is gone —
+    see 47 below)*
 15. **Live chat bubble** opens a window that always says "Agent Chester is
     typing..." — nobody is coming.
 16. **Search box** always replies "No products found" no matter what you
@@ -120,6 +121,12 @@ Cheat sheet of every intentional issue, numbered to match code comments in
     the "Our Story" and "Meet The Team" copy with nothing to offset it —
     no card background, no overlay. Fully intentional: the text is not
     supposed to be readable.
+
+47. **Contact page is gone, replaced by "Shoe-bert"** (`contact.html`) — the
+    contact form, phone number, and address are gone entirely. The nav item
+    (still pointing at `contact.html` on every page) now reads "Shoe-bert"
+    and the page is just `images/qbert.png` — Q*bert, in sneakers — with no
+    explanation given anywhere on the site.
 
 ## Suggested reveal order for a live demo
 Open devtools console first (bug 9 hits immediately), then: hero image

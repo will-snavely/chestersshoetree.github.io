@@ -62,15 +62,6 @@ function subscribeNewsletter(event) {
   return false;
 }
 
-// BUG 14: contact form "succeeds" with an alert while actually throwing in console
-function submitContactForm(event) {
-  event.preventDefault();
-  alert('Thank you! Your message has been sent successfully.');
-  console.error('Uncaught ReferenceError: sendToCRM is not defined');
-  // form data goes precisely nowhere
-  return false;
-}
-
 // BUG 15: live chat bubble that "connects" and never responds, forever
 function toggleChat() {
   const win = document.querySelector('[data-chat-window]');
